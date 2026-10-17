@@ -43,6 +43,15 @@ h1, h2, .titulo-consulta, .titulo-seccion{
   gap: 10px;
   text-decoration: none;
 }
+.brand-escudo{
+  display: flex;
+  align-items: center;
+}
+.escudo-img{
+  height: 44px;
+  width: auto;
+  display: block;
+}
 .brand-text{
   font-family: 'Roboto Slab', serif;
   font-size: 24px;
