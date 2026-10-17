@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros de la Propiedad Automotor - DNRPA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand" onclick="irAInicio(event)">
+        <span class="brand-escudo" aria-hidden="true">
+          <!-- Escudo simple estilo sol -->
+          <svg viewBox="0 0 40 40" width="38" height="38">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="#152c5b" stroke-width="1.6"/>
+            <circle cx="20" cy="20" r="7" fill="#f4c542" stroke="#152c5b" stroke-width="1.2"/>
+            <g stroke="#f4c542" stroke-width="1.4">
+              <line x1="20" y1="2" x2="20" y2="8"/>
+              <line x1="20" y1="32" x2="20" y2="38"/>
+              <line x1="2" y1="20" x2="8" y2="20"/>
+              <line x1="32" y1="20" x2="38" y2="20"/>
+              <line x1="7" y1="7" x2="11" y2="11"/>
+              <line x1="29" y1="29" x2="33" y2="33"/>
+              <line x1="33" y1="7" x2="29" y2="11"/>
+              <line x1="11" y1="29" x2="7" y2="33"/>
+            </g>
+          </svg>
+        </span>
+        <span class="brand-text">Argentina.gob.ar</span>
+      </a>
+
+      <div class="header-search">
+        <input type="text" placeholder="Buscar trámites, servicios o áreas" aria-label="Buscar">
+        <button type="button" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14z"/></svg>
+        </button>
+      </div>
+
+      <a href="#" class="btn-mi-arg">Mi Argentina</a>
+    </div>
+  </header>
+
+  <!-- ================= NAV NEGRA ================= -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <div class="nav-crumb">D.N.R.P.A. y C.P. &nbsp; Registros Seccionales&nbsp;/</div>
+      <ul class="nav-links">
+        <li>Consultas</li>
+        <li class="sep">|</li>
+        <li>Trámites</li>
+        <li class="sep">|</li>
+        <li>Acceso Restringido</li>
+        <li class="sep">|</li>
+        <li>Dependencias</li>
+        <li class="sep">|</li>
+        <li>Concursos</li>
+        <li class="sep">|</li>
+        <li>Institucional</li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= PANTALLA 1: HOME ================= -->
+  <main id="pantalla-inicio" class="pantalla activa">
+
+    <section class="hero-mini">
+      <div class="hero-mini-inner">
+        <h1>Registros de la Propiedad Automotor</h1>
+        <p>Regulamos todo lo relacionado con la propiedad del automotor y los créditos prendarios,
+           y organizamos el funcionamiento de los Registros Seccionales de todo el País.</p>
+      </div>
+    </section>
+
+    <div class="contenedor">
+
+      <section class="bloque-estimador">
+        <h2>Estimá los costos de tu trámite</h2>
+        <p>Te ofrecemos una herramienta en línea para que conozcas el costo aproximado de la
+           inscripción de un vehículo 0 km o la transferencia de un vehículo usado.</p>
+        <a href="#" class="btn-verde">Calculá</a>
+      </section>
+
+      <h2 class="titulo-seccion">Trámites frecuentes</h2>
+      <div class="grid-tramites">
+
+        <div class="card-tramite">
+          <span class="card-ico">ⓘ</span>
+          <span class="card-txt">Informe de Estado de Dominio</span>
+        </div>
+
+        <div class="card-tramite">
+          <span class="card-ico">ⓘ</span>
+          <span class="card-txt">Informe Histórico</span>
+        </div>
+
+        <div class="card-tramite">
+          <span class="card-ico">⬛</span>
+          <span class="card-txt">Denuncia de Venta</span>
+        </div>
+
+        <div class="card-tramite">
+          <span class="card-ico">▭</span>
+          <span class="card-txt">Renovación de Cédula</span>
+        </div>
+
+        <!-- ÚNICA TARJETA FUNCIONAL -->
+        <div class="card-tramite funcional" onclick="irAChapas()" title="Ir a consulta de chapas">
+          <span class="card-ico">ⓘ</span>
+          <span class="card-txt">Disponibilidad de Chapas</span>
+        </div>
+
+      </div>
+
+      <h2 class="titulo-seccion">Consultas</h2>
+      <div class="grid-consultas">
+        <div class="card-consulta">Dónde está radicado un vehículo según su patente</div>
+        <div class="card-consulta">Dónde radicar un vehículo según domicilio</div>
+        <div class="card-consulta">Cuáles son los Registros Seccionales de todo el país</div>
+        <div class="card-consulta">Cuáles son las plantas verificadoras de cada provincia</div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= PANTALLA 2: CONSULTA CHAPAS ================= -->
+  <main id="pantalla-chapas" class="pantalla">
+
+    <section class="hero-chapas">
+      <div class="hero-chapas-inner">
+        <h1>Registros de la Propiedad<br>Automotor</h1>
+      </div>
+    </section>
+
+    <div class="contenedor">
+      <h2 class="titulo-consulta">Consulta disponibilidad de chapas</h2>
+
+      <div class="form-chapas">
+        <input type="text" id="inputDominio" placeholder="INGRESE NRO DE DOMINIO"
+               autocomplete="off" onkeydown="if(event.key==='Enter') buscarDominio()">
+        <button class="btn-buscar" onclick="buscarDominio()">Buscar</button>
+      </div>
+
+      <!-- Resultado -->
+      <div id="resultado" class="resultado oculto"></div>
+
+      <a href="#" class="volver" onclick="irAInicio(event)">&larr; Volver al inicio</a>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Dirección:</strong> Av. Corrientes 5666 | Ciudad Autónoma de Buenos Aires</p>
+      <p><strong>Código postal:</strong> C1414AJW</p>
+      <p>Horario de atención de 8:00 a 15:00 Hs.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
