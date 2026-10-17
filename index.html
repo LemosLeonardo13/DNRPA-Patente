@@ -13,11 +13,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="#" class="brand" onclick="irAInicio(event)">
-        <span class="brand-escudo">
-          <!-- Escudo Nacional Argentino. Subí el archivo "escudo.svg" al repo. -->
-          <img src="escudo.svg" alt="Escudo Nacional Argentino" class="escudo-img">
-        </span>
-        <span class="brand-text">Argentina.gob.ar</span>
+        <img src="escudo.svg" alt="Argentina.gob.ar" class="brand-logo">
       </a>
 
       <div class="header-search">
@@ -36,16 +32,11 @@
     <div class="nav-inner">
       <div class="nav-crumb">D.N.R.P.A. y C.P. &nbsp; Registros Seccionales&nbsp;/</div>
       <ul class="nav-links">
-        <li>Consultas</li>
-        <li class="sep">|</li>
-        <li>Trámites</li>
-        <li class="sep">|</li>
-        <li>Acceso Restringido</li>
-        <li class="sep">|</li>
-        <li>Dependencias</li>
-        <li class="sep">|</li>
-        <li>Concursos</li>
-        <li class="sep">|</li>
+        <li>Consultas</li><li class="sep">|</li>
+        <li>Trámites</li><li class="sep">|</li>
+        <li>Acceso Restringido</li><li class="sep">|</li>
+        <li>Dependencias</li><li class="sep">|</li>
+        <li>Concursos</li><li class="sep">|</li>
         <li>Institucional</li>
       </ul>
     </div>
@@ -54,8 +45,8 @@
   <!-- ================= PANTALLA 1: HOME ================= -->
   <main id="pantalla-inicio" class="pantalla activa">
 
-    <section class="hero-mini">
-      <div class="hero-mini-inner">
+    <section class="hero">
+      <div class="hero-inner">
         <h1>Registros de la Propiedad Automotor</h1>
         <p>Regulamos todo lo relacionado con la propiedad del automotor y los créditos prendarios,
            y organizamos el funcionamiento de los Registros Seccionales de todo el País.</p>
@@ -73,33 +64,15 @@
 
       <h2 class="titulo-seccion">Trámites frecuentes</h2>
       <div class="grid-tramites">
-
-        <div class="card-tramite">
-          <span class="card-ico">ⓘ</span>
-          <span class="card-txt">Informe de Estado de Dominio</span>
-        </div>
-
-        <div class="card-tramite">
-          <span class="card-ico">ⓘ</span>
-          <span class="card-txt">Informe Histórico</span>
-        </div>
-
-        <div class="card-tramite">
-          <span class="card-ico">⬛</span>
-          <span class="card-txt">Denuncia de Venta</span>
-        </div>
-
-        <div class="card-tramite">
-          <span class="card-ico">▭</span>
-          <span class="card-txt">Renovación de Cédula</span>
-        </div>
+        <div class="card-tramite"><span class="card-ico">ⓘ</span><span class="card-txt">Informe de Estado de Dominio</span></div>
+        <div class="card-tramite"><span class="card-ico">ⓘ</span><span class="card-txt">Informe Histórico</span></div>
+        <div class="card-tramite"><span class="card-ico">⬛</span><span class="card-txt">Denuncia de Venta</span></div>
+        <div class="card-tramite"><span class="card-ico">▭</span><span class="card-txt">Renovación de Cédula</span></div>
 
         <!-- ÚNICA TARJETA FUNCIONAL -->
         <div class="card-tramite funcional" onclick="irAChapas()" title="Ir a consulta de chapas">
-          <span class="card-ico">ⓘ</span>
-          <span class="card-txt">Disponibilidad de Chapas</span>
+          <span class="card-ico">ⓘ</span><span class="card-txt">Disponibilidad de Chapas</span>
         </div>
-
       </div>
 
       <h2 class="titulo-seccion">Consultas</h2>
@@ -116,8 +89,8 @@
   <!-- ================= PANTALLA 2: CONSULTA CHAPAS ================= -->
   <main id="pantalla-chapas" class="pantalla">
 
-    <section class="hero-chapas">
-      <div class="hero-chapas-inner">
+    <section class="hero hero-chapas">
+      <div class="hero-inner">
         <h1>Registros de la Propiedad<br>Automotor</h1>
       </div>
     </section>
@@ -132,7 +105,7 @@
       </div>
 
       <!-- Resultado -->
-      <div id="resultado" class="resultado oculto"></div>
+      <div id="resultado" class="oculto"></div>
 
       <a href="#" class="volver" onclick="irAInicio(event)">&larr; Volver al inicio</a>
     </div>
